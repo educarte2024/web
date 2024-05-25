@@ -22,6 +22,7 @@ header {
 }
 
 .title-header h1 {
+    text-shadow: -1px -1px 1px #00ffff, 1px 1px 1px #ff00ff;
     z-index: 10;
     padding: 25px;
     font-family: 'More Sugar', 'Comic Sans MS';

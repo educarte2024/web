@@ -13,6 +13,20 @@
 
     <body>
 
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+        </div>
+
+        <script>
+            window.addEventListener('load', function() {
+            var loader = document.querySelector('.loader-wrapper');
+            var content = document.querySelector('.content');
+
+            loader.style.display = 'none';
+            content.style.display = 'block';
+            });
+        </script>
+
         <header>
             <div class="title-header">
                 <h1>APRENDE CON REALIDAD AUMENTADA</h1>

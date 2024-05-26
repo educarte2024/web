@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'More Sugar';
-    src: url('https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf') format('truetype');
+    src: url(https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf);
 }
 
 * {
@@ -24,7 +24,6 @@ header {
 .title-header h1 {
     text-shadow: -0.2px -1px 1px #00ffff, 0.2px 1px 1px #ff00ff;
     z-index: 10;
-    position: relative; /* Añadir position */
     padding: 25px;
     font-family: 'More Sugar', 'Comic Sans MS';
     text-align: left;
@@ -51,7 +50,7 @@ header {
     width: 100%;
     padding: 3% 15% 15% 15%;
     box-sizing: border-box;
-    background-image: url('https://educarte2024.github.io/web/img/bacground.png');
+    background-image: url(https://educarte2024.github.io/web/img/bacground.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -119,7 +118,7 @@ header {
 
 .flor-arcohiris-star {
     width: 25%;
-    height: auto; /* Cambiar fit-content a auto */
+    height: fit-content;
 }
 
 .boy {
@@ -141,7 +140,6 @@ header {
     margin-top: -81px;
     margin-bottom: 31px;
     z-index: 10;
-    position: relative; /* Añadir position */
 }
 
 .page h3 {
@@ -156,11 +154,6 @@ header {
     font-size: 20px;
 }
 
-li {
-    font-family: arial;
-    font-size: 20px;
-} 
-
 .page article {
     padding: 0% 10% 10% 10%;
     box-sizing: border-box;
@@ -171,17 +164,22 @@ li {
     height: 250px;
 }
 
+
+
 @media only screen and (max-width: 850px) {
     header { 
         height: 200px !important;
         position: relative;
     }
+
     .image-header { 
         height: 200px !important;
     }
+
     .title-header { 
         height: 200px !important; 
     }
+
     .title-header h1 {
         padding: 10px;
         font-family: 'More Sugar', 'Comic Sans MS';
@@ -189,6 +187,7 @@ li {
         font-size: 40px;
         line-height: 1.4;
     }
+
     article {
         clear: both;
         width: 100%;
@@ -197,23 +196,28 @@ li {
         background-size: contain !important; /* Cambiado de 'cover' a 'contain' */
         background-position: center !important; /* Asegura que la imagen se centre en el elemento */
     }
+
     .img-box {
         width: 100% !important;
         height: auto; 
         margin-bottom: 15px;
     }
+
     .cloud {
         width: 24% !important;
         height: auto;
     }
+
     .arcohiris-flor {
         width: 25% !important;
         height: auto;
     }
+
     .flor-arcohiris-star {
         width: 35% !important;
-        height: auto; /* Cambiar fit-content a auto */
+        height: fit-content;
     }
+
     .boy {
         width: 16% !important;
     }

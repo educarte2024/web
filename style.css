@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'More Sugar';
-    src: url(https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf);
+    src: url('https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf') format('truetype');
 }
 
 * {
@@ -24,6 +24,7 @@ header {
 .title-header h1 {
     text-shadow: -0.2px -1px 1px #00ffff, 0.2px 1px 1px #ff00ff;
     z-index: 10;
+    position: relative; /* Añadir position */
     padding: 25px;
     font-family: 'More Sugar', 'Comic Sans MS';
     text-align: left;
@@ -45,11 +46,12 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
 .main-wrapper { 
     width: 100%;
     padding: 3% 15% 15% 15%;
     box-sizing: border-box;
-    background-image: url(https://educarte2024.github.io/web/img/bacground.png);
+    background-image: url('https://educarte2024.github.io/web/img/bacground.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -59,12 +61,14 @@ header {
     width: 100%;
     height: auto;
 }
+
 .main-wrapper article h2 {
     font-family: 'More Sugar', 'Comic Sans MS';
     text-align: center;
     color: rgb(252, 57, 1);
     font-size: 30px;
 }
+
 .main-wrapper article p {
     margin: 20px 0px;
     font-family: 'More Sugar', 'Comic Sans MS';
@@ -72,10 +76,12 @@ header {
     font-size: 25px;
     color: #161616;
 }
+
 .center {  
     display: grid;
     place-items: center; /* Centra horizontal y verticalmente */  
 }
+
 .img-box {
     width: 50%;
     height: auto; 
@@ -100,24 +106,34 @@ header {
 .page .right {
     align-self: flex-end; /* Alinea las imágenes a la derecha */
 }
+
 .cloud {
     width: 18%;
     height: auto;
 }
+
 .arcohiris-flor {
     width: 17%;
     height: auto;
 }
+
 .flor-arcohiris-star {
     width: 25%;
-    height: fit-content;
+    height: auto; /* Cambiar fit-content a auto */
 }
+
 .boy {
     width: 10%;
 }
+
 .abc {
     width: 25%;
 }
+
+.cow {
+    width: 1%;
+}
+
 .page h2 {
     font-family: 'More Sugar', 'Comic Sans MS';
     font-size: 35px;
@@ -125,25 +141,36 @@ header {
     margin-top: -81px;
     margin-bottom: 31px;
     z-index: 10;
+    position: relative; /* Añadir position */
 }
+
 .page h3 {
     font-family: 'More Sugar', 'Comic Sans MS';
     font-size: 33px;
     text-align: center;
     font-weight: 100;
 }
+
 .page p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
 }
+
+li {
+    font-family: arial;
+    font-size: 20px;
+} 
+
 .page article {
     padding: 0% 10% 10% 10%;
     box-sizing: border-box;
 }
+
 .page .relleno {
     width: 100%;
     height: 250px;
 }
+
 @media only screen and (max-width: 850px) {
     header { 
         height: 200px !important;
@@ -185,7 +212,7 @@ header {
     }
     .flor-arcohiris-star {
         width: 35% !important;
-        height: fit-content;
+        height: auto; /* Cambiar fit-content a auto */
     }
     .boy {
         width: 16% !important;

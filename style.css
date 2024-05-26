@@ -168,9 +168,10 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
-.page article ul li li {
+.page article li>ul {
     list-style-type: square;
-    margin-left: 20px;
+    padding-left: 20px; /* Agrega relleno a la izquierda */
+    margin-left: 20px; /* Agrega margen a la izquierda */
 }
 
 @media only screen and (max-width: 850px) {

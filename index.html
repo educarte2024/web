@@ -18,14 +18,23 @@
         </div>
 
         <script>
+            // Escucha el evento 'load' que se dispara cuando la página ha cargado completamente
             window.addEventListener('load', function() {
-            var loader = document.querySelector('.loader-wrapper');
-            var content = document.querySelector('.content');
-
-            loader.style.display = 'none';
-            content.style.display = 'block';
+                // Selecciona el contenedor de la pantalla de carga y el título
+                var loader = document.querySelector('.loader-wrapper');
+                var titleHeader = document.querySelector('.title-header h1');
+        
+                // Oculta el contenedor de la pantalla de carga
+                loader.style.display = 'none';
+                
+                // Muestra el contenido principal
+                document.querySelector('.content').style.display = 'block';
+        
+                // Añade la clase 'animate-title' al título para iniciar la animación
+                titleHeader.classList.add('animate-title');
             });
         </script>
+        
 
         <header>
             <div class="title-header">

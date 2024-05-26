@@ -2,14 +2,12 @@
     font-family: 'More Sugar';
     src: url(https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf);
 }
- 
-/* Animación para el título */
 @keyframes fadeInFromRight {
-    0% {
+    from {
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(50px); /* Comienza 50 píxeles a la derecha */
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateX(0);
     }
@@ -46,9 +44,6 @@ header {
     margin-bottom: 100px;
 }
 
- 
-
-
 .title-header {
     float: left;
     width: 64%;
@@ -65,9 +60,8 @@ header {
     font-size: 63px;
     line-height: 1.2;
     font-weight: bold;
-    opacity: 0; /* Inicialmente oculto */
 }
-.animate-title {
+.fadeInFromRight {
     animation: fadeInFromRight 1s ease-out forwards;
 }
 .image-header {
@@ -242,7 +236,6 @@ header {
   .content {
     display: none;
   }
-
   
 @media only screen and (max-width: 850px) {
     header { 

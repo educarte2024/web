@@ -28,6 +28,10 @@
 .subtle-shake-animation {
     animation: subtle-shake 1s ease-in-out;
 }
+.left, .right {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));  /* Sombra sutil alrededor del borde */
+}
+
 
 
 * {

@@ -26,3 +26,26 @@ function toggleGame(event) {
         gameDiv.classList.add("fade-in");
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const element = document.getElementById('quienessomos');
+    const windowHeight = window.innerHeight;
+
+    function checkIfInView() {
+        const scrollY = window.scrollY || window.pageYOffset;
+        const elementY = element.getBoundingClientRect().top + scrollY;
+        const distanceFromTop = elementY - scrollY;
+        
+        // Comprueba si el elemento está en el viewport
+        if (distanceFromTop <= windowHeight && distanceFromTop >= 0) {
+            element.classList.add('fade-in');
+            element.classList.remove('fade-out');
+        } else {
+            element.classList.add('fade-out');
+            element.classList.remove('fade-in');
+        }
+    }
+
+    window.addEventListener('scroll', checkIfInView);
+    checkIfInView(); // Ejecuta la función en la carga inicial por si el elemento ya está visible
+});

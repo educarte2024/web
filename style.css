@@ -36,13 +36,99 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-header { 
+.header-box { 
     height: 250px;
     position: relative;
     margin-bottom: 100px;
 }
+ 
+/* Estilos básicos y restablecimiento de márgenes/paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del header y el nav */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilo del menú */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Ocultar checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Estilo del ícono de menú */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f8f8;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    /* Mostrar el ícono de menú */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+}
+
 
 .title-header {
     float: left;
@@ -238,7 +324,7 @@ header {
   }
   
 @media only screen and (max-width: 850px) {
-    header { 
+    .header-box { 
         height: 200px !important;
         position: relative;
     }

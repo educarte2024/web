@@ -1,50 +1,3 @@
-@font-face {
-    font-family: 'More Sugar';
-    src: url(https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf);
-}
-@keyframes fadeInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px); /* Comienza 50 píxeles a la derecha */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes subtle-shake {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    10%, 30%, 50%, 70%, 90% {
-        transform: translateX(-5px);
-    }
-    20%, 40%, 60%, 80% {
-        transform: translateX(5px);
-    }
-}
-
-.subtle-shake-animation {
-    animation: subtle-shake 1s ease-in-out;
-}
-.left, .right {
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
-    -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.header-box { 
-    height: 250px;
-    position: relative;
-    margin-bottom: 100px;
-}
- 
 /* Estilos básicos y restablecimiento de márgenes/paddings */
 * {
     margin: 0;
@@ -54,7 +7,8 @@
 
 /* Estilos del header y el nav */
 header .menu-header {
-    background-color: #f8f8f8;
+    /**background-color: #f8f8f8;**/
+    background: red;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -74,7 +28,7 @@ nav {
 
 /* Estilo del menú */
 .menu {
-    z-index: 20
+    z-index: 20;
     display: flex;
     list-style: none;
 }
@@ -101,6 +55,18 @@ nav {
     cursor: pointer;
 }
 
+/* Animación para el menú desplegable */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .menu {
@@ -113,6 +79,7 @@ nav {
         background-color: #f8f8f8;
         padding: 10px 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: slideDown 0.3s ease-out forwards;
     }
 
     .menu li {
@@ -130,6 +97,50 @@ nav {
     }
 }
 
+/* Otros estilos */
+@font-face {
+    font-family: 'More Sugar';
+    src: url(https://educarte2024.github.io/web/fonts/MoreSugar-Regular.ttf);
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* Comienza 50 píxeles a la derecha */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes subtle-shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.subtle-shake-animation {
+    animation: subtle-shake 1s ease-in-out;
+}
+
+.left, .right {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+    -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Estilos específicos de la página */
+.header-box { 
+    height: 250px;
+    position: relative;
+    margin-bottom: 100px;
+}
 
 .title-header {
     float: left;
@@ -148,9 +159,11 @@ nav {
     line-height: 1.2;
     font-weight: bold;
 }
+
 .fadeInFromRight {
     animation: fadeInFromRight 1s ease-out forwards;
 }
+
 .image-header {
     overflow: hidden;
     float: right;
@@ -288,6 +301,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
+
 .page article ul li li {
     list-style-type: circle;
     margin-left: 20px;
@@ -304,26 +318,26 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-  }
-  
-  .loader {
+}
+
+.loader {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #3498db;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-  
-  .content {
+}
+
+.content {
     display: none;
-  }
-  
+}
+
 @media only screen and (max-width: 850px) {
     .header-box { 
         height: 200px !important;

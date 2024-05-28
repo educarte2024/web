@@ -74,6 +74,7 @@ nav {
 
 /* Estilo del menú */
 .menu {
+    z-index: 20
     display: flex;
     list-style: none;
 }

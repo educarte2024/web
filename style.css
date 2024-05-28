@@ -4,13 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
- 
-header .menu-header {
-    /**background-color: #f8f8f8;**/
-    background: red;
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-top: 1.5rem !important;
+}
+
+/* Estilos del header y el nav */
+.menu-header {
+    background-color: #305aa5;
+    color: #fff;
     padding: 10px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 90px;
 }
 
 nav {
@@ -22,8 +28,9 @@ nav {
 
 /* Estilo del logo */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-family: 'More Sugar';
+    font-size: 27px;
+    font-weight: normal !important;
 }
 
 /* Estilo del menú */
@@ -35,12 +42,16 @@ nav {
 
 .menu li {
     margin-left: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu li a {
+    font-family: 'More Sugar';
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 18px;
+    display: block;
+    padding: 8px;
 }
 
 /* Ocultar checkbox */
@@ -61,6 +72,7 @@ nav {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -82,6 +94,10 @@ nav {
         animation: slideDown 0.3s ease-out forwards;
     }
 
+    .menu li a {
+        color: #161616;
+    }
+
     .menu li {
         margin: 10px 0;
     }
@@ -92,7 +108,7 @@ nav {
     }
 
     /* Mostrar el menú cuando el checkbox está marcado */
-    #menu-toggle:checked + .menu-icon + .menu {
+    #menu-toggle:checked+.menu-icon+.menu {
         display: flex;
     }
 }
@@ -106,8 +122,10 @@ nav {
 @keyframes fadeInFromRight {
     from {
         opacity: 0;
-        transform: translateX(50px); /* Comienza 50 píxeles a la derecha */
+        transform: translateX(50px);
+        /* Comienza 50 píxeles a la derecha */
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -115,13 +133,24 @@ nav {
 }
 
 @keyframes subtle-shake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(-5px);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: translateX(5px);
     }
 }
@@ -130,26 +159,83 @@ nav {
     animation: subtle-shake 1s ease-in-out;
 }
 
-.left, .right {
+.left,
+.right {
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
     -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.1));
 }
 
+/* Agregar sombra y fondo en hover */
+.menu li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Estilos específicos de la página */
-.header-box { 
+/**.header-box { 
     height: 250px;
     position: relative;
     margin-bottom: 100px;
+}**/
+/** cambios recientes **/
+.header-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    /* Centrar el encabezado horizontalmente */
+    background-color: #333;
+    /* Cambia esto al color de fondo deseado */
+}
+
+.image-header img {
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 400px;
+    display: block;
+    z-index: -1;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
 }
 
 .title-header {
-    float: left;
-    width: 64%;
-    height: 250px;
-    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    /* Cambia el color del texto según el contraste con la imagen */
+    z-index: 1;
+    width: 80%;
+    /* Ancho del contenedor del título */
+    max-width: 600px;
+    /* Ancho máximo del título para evitar que sea demasiado ancho en resoluciones muy grandes */
 }
 
 .title-header h1 {
+    font-family: 'More Sugar', 'Comic Sans MS';
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+    /* Bordes redondeados */
+}
+
+.header-box:hover .image-header img {
+    opacity: 1;
+    /* Mostrar completamente la imagen al pasar el cursor sobre el encabezado */
+}
+
+/**.title-header h1 {
     text-shadow: -0.2px -1px 1px #00ffff, 0.2px 1px 1px #ff00ff;
     z-index: 10;
     padding: 25px;
@@ -158,27 +244,27 @@ nav {
     font-size: 63px;
     line-height: 1.2;
     font-weight: bold;
-}
+}**/
 
 .fadeInFromRight {
     animation: fadeInFromRight 1s ease-out forwards;
 }
 
-.image-header {
+/**.image-header {
     overflow: hidden;
     float: right;
     width: 35%;
     height: 250px;
-}
+}**/
 
-.image-header img {
+/**.image-header img {
     margin-right: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+}**/
 
-.main-wrapper { 
+.main-wrapper {
     width: 100%;
     padding: 3% 15% 15% 15%;
     box-sizing: border-box;
@@ -208,34 +294,39 @@ nav {
     color: #161616;
 }
 
-.center {  
+.center {
     display: grid;
-    place-items: center; /* Centra horizontal y verticalmente */  
+    place-items: center;
+    /* Centra horizontal y verticalmente */
 }
 
 .img-box {
     width: 50%;
-    height: auto; 
+    height: auto;
     margin-bottom: 15px;
 }
 
 .page {
-    margin-top: 70px;
+    box-sizing: border-box; 
+    padding: 10px 50px;
     overflow: hidden;
 }
 
 .page .row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Ajusta este margen según necesites */
+    margin-bottom: 20px;
+    /* Ajusta este margen según necesites */
 }
 
 .page .left {
-    align-self: flex-start; /* Alinea las imágenes a la izquierda */
+    align-self: flex-start;
+    /* Alinea las imágenes a la izquierda */
 }
 
 .page .right {
-    align-self: flex-end; /* Alinea las imágenes a la derecha */
+    align-self: flex-end;
+    /* Alinea las imágenes a la derecha */
 }
 
 .cloud {
@@ -276,8 +367,8 @@ nav {
 
 .page h3 {
     font-family: 'More Sugar', 'Comic Sans MS';
-    font-size: 33px;
-    text-align: center;
+    font-size: 27px;
+    text-align: left;
     font-weight: 100;
     z-index: 20;
 }
@@ -285,6 +376,11 @@ nav {
 .page p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+    text-align: justify;
+}
+
+.games img {
+    width: 70px;
 }
 
 .page article {
@@ -297,12 +393,12 @@ nav {
     height: 250px;
 }
 
-.page article ul li {
+.page ul li {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-.page article ul li li {
+.page ul li li {
     list-style-type: circle;
     margin-left: 20px;
 }
@@ -330,29 +426,74 @@ nav {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .content {
     display: none;
 }
 
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
 @media only screen and (max-width: 850px) {
+    /**
     .header-box { 
         height: 200px !important;
         position: relative;
-    }
-
+    }**/
+    /**
     .image-header { 
         height: 200px !important;
-    }
+    }**/
 
-    .title-header { 
+    /**.title-header { 
         height: 200px !important; 
     }
-
+**/
     .title-header h1 {
+        font-weight: normal;
         padding: 10px;
         font-family: 'More Sugar', 'Comic Sans MS';
         text-align: left;
@@ -363,15 +504,18 @@ nav {
     article {
         clear: both;
         width: 100%;
-        height: auto; /* Puedes necesitar ajustar esto si usas 'contain' */ 
+        height: auto;
+        /* Puedes necesitar ajustar esto si usas 'contain' */
         background-repeat: no-repeat !important;
-        background-size: contain !important; /* Cambiado de 'cover' a 'contain' */
-        background-position: center !important; /* Asegura que la imagen se centre en el elemento */
+        background-size: contain !important;
+        /* Cambiado de 'cover' a 'contain' */
+        background-position: center !important;
+        /* Asegura que la imagen se centre en el elemento */
     }
 
     .img-box {
         width: 100% !important;
-        height: auto; 
+        height: auto;
         margin-bottom: 15px;
     }
 
@@ -392,5 +536,187 @@ nav {
 
     .boy {
         width: 16% !important;
+    }
+}
+
+ article h2 {
+    font-family: 'More Sugar', 'Comic Sans MS';
+    text-align: center;
+    color: rgb(252, 57, 1);
+    font-size: 30px;
+}
+article h3 {
+    font-family: 'More Sugar', 'Comic Sans MS';
+    font-size: 33px;
+    text-align: center;
+    font-weight: 100;
+    z-index: 20;
+}
+
+article p {
+    margin: 20px 0px;
+    font-family: 'More Sugar', 'Comic Sans MS';
+    text-align: center;
+    font-size: 25px;
+    color: #161616;
+}
+
+.games {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */ 
+    text-align: center;   
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.image-container, .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Añade un pequeño margen vertical */
+    padding: 15px;
+}
+.game-one {
+    display: none;
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*-- Mis estilos --*/
+
+/* ====================
+	* BOTONES / BOTON *
+==================== */
+.btn1 {
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 22px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+    margin-left: 15px;
+    box-shadow: 0px 6px 18px -5px rgba(0, 0, 0, 0.5);
+    background-size: 300% 100%;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn1:visited,
+.btn1:hover {
+    color: #fff;
+
+}
+
+.btn1:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn1 i {
+    color: #fff;
+    font-size: 16px
+}
+
+/*Verde*/
+.btn1.color-verde {
+    color: #fff;
+    background-image: linear-gradient(to right, #137f4c, #2bb673, #2bb673, #137f4c);
+}
+
+/*Azul*/
+.btn1.color-azul {
+    width: 150px;
+    color: #fff;
+    background-image: linear-gradient(to right, #0377a8, #4481eb, #4481eb, #0377a8);
+}
+
+/*Rojo*/
+.btn1.color-rojo {
+    color: #fff;
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #f15e64, #eb3941);
+}
+
+/*Amarillo*/
+.btn1.color-amarillo {
+    color: #fff;
+    background-image: linear-gradient(to right, #e48803, #e4ae2d, #e4ae2d, #e48803);
+}
+
+/*Oscuro*/
+.btn.color-oscuro {
+    color: #fff;
+    background-image: linear-gradient(to right, #29323c, #485563, #485563, #29323c);
+}
+
+/*Claro*/
+.btn1.color-claro {
+    color: #fff;
+    background-image: linear-gradient(to right, #ccc, #e8e8e8, #e8e8e8, #ccc);
+    color: #000
+}
+
+.btn1.color-claro i {
+    color: #000
+}
+
+.centrar {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
     }
 }

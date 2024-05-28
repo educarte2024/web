@@ -5,30 +5,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Educarte</title>
-        <link href="https://educarte2024.github.io/web/style.css"
-            rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://educarte2024.github.io/web/style.css">
+        <script src="https://educarte2024.github.io/web/script.js"></script>
+ 
 
     </head>
 
     <body>
-
         <div class="loader-wrapper">
             <div class="loader"></div>
         </div>
-
-        <script>
-            window.addEventListener('load', function() {
-            var loader = document.querySelector('.loader-wrapper');
-            var content = document.querySelector('.content');
-            var titleHeader = document.querySelector('.title-header h1');
-
-            loader.style.display = 'none';
-            //Aqui aplicar la clase 
-            content.style.display = 'block';
-            titleHeader.classList.add('fadeInFromRight');
-            });
-        </script>
 
         <header class="menu-header">
             <nav>
@@ -36,64 +22,57 @@
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre Educarte</a></li>
-                    <li><a href="#">Como usarlo</a></li>
-                    <li><a href="#">Juegos disponibles</a></li>
+                    <li><a href="https://educarte2024.github.io/web">Inicio</a></li>
+                    <li><a href="#quienessomos">Sobre Educarte</a></li>
+                    <li><a href="https://educarte2024.github.io/web/howtouse.html">Cómo usarlo</a></li>
+                    <li><a href="#juegosdisponibles">Juegos disponibles</a></li>
                 </ul>
             </nav>
         </header>
 
         <header class="header-box">
-            <div class="title-header">
-                <h1>APRENDE CON REALIDAD AUMENTADA</h1>
-            </div>
             <div class="image-header">
                 <img src="https://educarte2024.github.io/web/img/img-header.png"
                     alt="Educarte">
             </div>
+            <div class="title-header">
+                <h1>APRENDE CON REALIDAD AUMENTADA</h1>
+            </div>
         </header>
-        <div class="main-wrapper">
+
+        <br><br>
+
+        <div class="main-wrapper" id="quienessomos">
             <article>
-                <h2>¿QUIENES SOMOS?</h2>
-                <br>
-                <p>EDUCARTE es una aplicación móvil que enseña usando tecnología
-                    inmervisa. Queremos que las niñas y
-                    niños
+                <h2>¿QUIÉNES SOMOS?</h2>
+                <hr>
+                <p>EDUCARTE es una aplicación móvil que enseña usando
+                    tecnología inmervisa. Queremos que las niñas y niños
                     aprendan de una forma innovadora, usando su inteligencia a
                     través de la realidad aumentada.</p>
-                <br>
-                <br>
-                <h2>¿CÓMO USARLO?</h2>
-
-                <div class="center">
-                    <img class="img-box"
-                        src="https://educarte2024.github.io/web/img/descargar.png"
-                        alt="Descargar">
-
-                    <img class="img-box"
-                        src="https://educarte2024.github.io/web/img/Posiciona.png"
-                        alt="Posiciona">
-
-                    <img class="img-box"
-                        src="https://educarte2024.github.io/web/img/diviertete.png"
-                        alt="Diviertete">
-                    <br>
-                    <br>
-                </div>
             </article>
         </div>
 
-        <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+        <!--
+<div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://educarte2024.github.io/web/img/descargar.png" alt="Descargar">
             </div>
-            <article>
-                <h2>SIGUE LAS INSTRUCCIONES</h2>
+            <div class="slide">
+                <img src="https://educarte2024.github.io/web/img/Posiciona.png" alt="Posiciona">
+            </div>
+            <div class="slide">
+                <img src="https://educarte2024.github.io/web/img/diviertete.png" alt="Diviertete">
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    -->
+
+    <article>
+        <h2 id="juegosdisponibles">SIGUE LAS INSTRUCCIONES</h2>
 
                 <h3 style="color: #305aa5;">Los juegos</h3>
                 <br>
@@ -101,56 +80,71 @@
                     de los juegos
                     contenidos en la aplicación.</p>
                 <br>
-                <h3>Juego 1: Números</h3>
-                <p>El juego consiste en seleccionar la imagen con el número de
-                    objetos correctos
-                    dependiendo el número que sea requerido.</p>
+    </article>
 
-                <div class="relleno"></div>
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right boy"
-                    src="https://educarte2024.github.io/web/img/boy.png" alt>
+        <div class="page">
+            <div class="games">
+                <div class="image-container">
+                    <img src="https://educarte2024.github.io/web/img/boy.png"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 1: Números</h3>
+                    <p>El juego consiste en seleccionar la imagen con el número
+                        de objetos correctos dependiendo el número que sea
+                        requerido.</p>
+                </div>
+                <!--<div class="button-container"> 
+                <a class="btn1 color-azul" onclick="toggleGame()">Leer Más<i class="fas fa-download"></i></a>
+            </div>-->
+            </div>
+            <br>
+            <div class="game-one" id="gameOne">
+                Game one
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img src="https://educarte2024.github.io/web/img/abc.webp"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 2: Letras</h3>
+                    <p>El juego consiste en que el jugador</p>
+                </div>
+                <!--<div class="button-container"> 
+                <a class="btn1 color-azul" onclick="toggleGame()">Leer Más<i class="fas fa-download"></i></a>
+            </div>-->
             </div>
-            <article>
-                <h3>Juego 2: Letras</h3>
-                <p>El juego consiste en que el jugador</p>
-                <div class="relleno"></div>
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right abc"
-                    src="https://educarte2024.github.io/web/img/abc.webp" alt>
+            <br>
+            <div class="game-two" style="display: none;">
+                Game one
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img src="https://educarte2024.github.io/web/img/cow.webp"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 3: Animales</h3>
+                    <p>El juego consiste en identificar el animal escuchando el
+                        sonido emitido por el botón de play. Esto con el
+                        objetivo de que se aprenda a identificar los sonidos que
+                        emiten los animales presentados.</p>
+                </div>
+                <div class="button-container">
+                    <a data-target="gamethree" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
-            <article>
-                <h3>Juego 3: Animales</h3>
+            <br>
+            <div id="gamethree" style="display: none;">
                 <p>El juego consiste en identificar el animal escuchando el
                     sonido emitido por el botón de play. Esto con el
                     objetivo de que se aprenda a identificar los sonidos que
@@ -224,28 +218,29 @@
                         </ul>
                     </li>
                 </ul>
-
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right cow"
-                    src="https://educarte2024.github.io/web/img/cow.webp" alt>
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img src="https://educarte2024.github.io/web/img/apple.webp"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 4: Cazadores de frutas</h3>
+                    <p>La actividad "Cazadores de Frutas" tiene como objetivo
+                        principal promover el reconocimiento de diferentes
+                        frutas...</p>
+                </div>
+                <div class="button-container">
+                    <a data-target="gamefour" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
-            <article>
-                <h3>Juego 4: Cazadores de frutas</h3>
+            <br>
+            <div id="gamefour" style="display: none;">
                 <p><b>Objetivo:</b>La actividad "Cazadores de Frutas" tiene como
                     objetivo principal
                     promover el reconocimiento de diferentes frutas y mejorar la
@@ -338,29 +333,28 @@
                         </ul>
                     </li>
                 </ul>
-
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right cow"
-                    src="https://educarte2024.github.io/web/img/cow.webp" alt>
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img
+                        src="https://educarte2024.github.io/web/img/zanahoria.webp"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 5: Cazadores de Verduras</h3>
+                    <p>En esta actividad, los niños aprenderán a reconocer y asociar diferentes figuras geométricas. En la pantalla principal...</p>
+                </div>
+                <div class="button-container">
+                    <a data-target="gamefive" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
-            <article>
-                <h3>Juego 5: Cazadores de Verduras</h3>
-                <br>
+            <br>
+            <div id="gamefive" style="display: none;">
                 <p style="text-align: center;">Actividad: Juego de Asociación de
                     Figuras Geométricas*</p>
                 <br>
@@ -449,29 +443,29 @@
                         </ul>
                     </li>
                 </ul>
-
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right cow"
-                    src="https://educarte2024.github.io/web/img/zanahoria.webp"
-                    alt>
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img src="https://educarte2024.github.io/web/img/circle.png"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 6: Figuras</h3>
+                    <p>"Cazadores de Frutas" es una actividad diseñada para
+                        niños que combina la tecnología de realidad aumentada
+                        con el aprendizaje sobre frutas.</p>
+                </div>
+                <div class="button-container">
+                    <a data-target="gamesix" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
-            <article>
-                <h3>Juego 6: Figuras</h3>
+            <br>
+            <div id="gamesix" style="display: none;">
                 <p><b>Objetivo:</b>La actividad "Cazadores de Frutas" tiene como
                     objetivo principal
                     promover el reconocimiento de diferentes frutas y mejorar la
@@ -523,30 +517,29 @@
                         </ul>
                     </li>
                 </ul>
-
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right cow"
-                    src="https://educarte2024.github.io/web/img/circle.png"
-                    alt>
             </div>
         </div>
 
         <div class="page">
-            <div class="row">
-                <img class="left cloud"
-                    src="https://educarte2024.github.io/web/img/cloud.webp">
-                <img class="right arcohiris-flor"
-                    src="https://educarte2024.github.io/web/img/arcohiris_con_flor.png"
-                    alt>
+            <div class="games">
+                <div class="image-container">
+                    <img
+                        src="https://educarte2024.github.io/web/img/zanahoria.webp"
+                        alt>
+                </div>
+                <div>
+                    <h3>Juego 7: Emociones</h3>
+                    <p>Descripción: El juego consiste en que el niño aprenda a identificar
+                        las emociones y sus sonidos correspondientes.</p>
+                </div>
+                <div class="button-container">
+                    <a data-target="gameseven" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
-            <article>
-                <h3>Juego 7: Emociones</h3>
-                <br>
+            <br>
+            <div id="gameseven" style="display: none;">
                 <p>El juego consiste en que el niño aprenda a identificar las
                     emociones y sus
                     sonidos correspondientes.
@@ -623,56 +616,12 @@
                         </ul>
                     </li>
                 </ul>
-
-            </article>
-
-            <div class="row">
-                <img class="left flor-arcohiris-star"
-                    src="https://educarte2024.github.io/web/img/flor_arcohiris_star.png"
-                    alt>
-                <img class="right cow"
-                    src="https://educarte2024.github.io/web/img/zanahoria.webp"
-                    alt>
             </div>
         </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Obtener todas las imágenes con la clase left y right
-                const leftImages = document.querySelectorAll('.left');
-                const rightImages = document.querySelectorAll('.right');
-            
-                // Función para agregar y quitar la clase de animación
-                function addAnimation(images) {
-                    images.forEach(function(image) {
-                        // Añadir la clase de animación
-                        image.classList.add('subtle-shake-animation');
-                    });
-                }
-            
-                function removeAnimation(images) {
-                    images.forEach(function(image) {
-                        // Quitar la clase de animación después de que la animación se complete
-                        setTimeout(function() {
-                            image.classList.remove('subtle-shake-animation');
-                        }, 1000); // Tiempo de la animación (1 segundo)
-                    });
-                }
-            
-                // Ejecutar la animación cada 5 minutos
-                setInterval(function() {
-                    // Añadir la clase de animación
-                    addAnimation(leftImages);
-                    addAnimation(rightImages);
-            
-                    // Quitar la clase de animación después de que la animación se complete
-                    setTimeout(function() {
-                        removeAnimation(leftImages);
-                        removeAnimation(rightImages);
-                    }, 1000); // Tiempo de la animación (1 segundo)
-                }, 100000); // 300000 ms = 5 minutos
-            });
-            </script>
+        <footer>
+            <p>&copy; 2024 Educarte</p>
+        </footer>
 
     </body>
 

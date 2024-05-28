@@ -549,6 +549,7 @@ nav {
     }
     .games {
         padding: 6px !important;
+        flex-direction: column;
     }
 }
 

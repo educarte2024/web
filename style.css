@@ -544,6 +544,12 @@ nav {
     .boy {
         width: 16% !important;
     }
+    .page {
+        padding: 5px !important;
+    }
+    .games {
+        padding: 6px !important;
+    }
 }
 
  article h2 {

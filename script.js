@@ -7,25 +7,23 @@ window.addEventListener('load', function () {
     content.style.display = 'block';
     titleHeader.classList.add('fadeInFromRight');
 });
+
 function toggleGame(event) {
     var targetId = event.currentTarget.getAttribute("data-target");
     var gameDiv = document.getElementById(targetId);
-    var button = event.currentTarget;
 
     if (gameDiv.classList.contains("fade-in")) {
         // Start fade-out animation
         gameDiv.classList.remove("fade-in");
         gameDiv.classList.add("fade-out");
-        setTimeout(function () {
+        setTimeout(function() {
             gameDiv.style.display = "none";
             gameDiv.classList.remove("fade-out");
         }, 500); // Match this to the duration of fadeOut animation
-        button.innerHTML = 'Leer Más<i class="fas fa-download"></i>'; // Change button text to 'Leer Más'
     } else {
         // Start fade-in animation
         gameDiv.style.display = "block";
         gameDiv.classList.add("fade-in");
-        button.innerHTML = 'Leer Menos<i class="fas fa-download"></i>'; // Change button text to 'Leer Menos'
     }
 }
 

@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Educarte</title>
-        <link rel="stylesheet" href="https://educarte2024.github.io/web/style.css">
+        <link rel="stylesheet"
+            href="https://educarte2024.github.io/web/style.css">
         <script src="https://educarte2024.github.io/web/script.js"></script>
- 
 
     </head>
 
@@ -22,9 +22,12 @@
                 <input type="checkbox" id="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <ul class="menu">
-                    <li><a href="https://educarte2024.github.io/web">Inicio</a></li>
+                    <li><a
+                            href="https://educarte2024.github.io/web">Inicio</a></li>
                     <li><a href="#quienessomos">Sobre Educarte</a></li>
-                    <li><a href="https://educarte2024.github.io/web/howtouse.html">Cómo usarlo</a></li>
+                    <li><a
+                            href="https://educarte2024.github.io/web/howtouse.html">Cómo
+                            usarlo</a></li>
                     <li><a href="#juegosdisponibles">Juegos disponibles</a></li>
                 </ul>
             </nav>
@@ -71,16 +74,16 @@
     </div>
     -->
 
-    <article>
-        <h2 id="juegosdisponibles">SIGUE LAS INSTRUCCIONES</h2>
+        <article>
+            <h2 id="juegosdisponibles">SIGUE LAS INSTRUCCIONES</h2>
 
-                <h3 style="color: #305aa5;">Los juegos</h3>
-                <br>
-                <p>A continuación se presentan varios ejemplos de instrucciones
-                    de los juegos
-                    contenidos en la aplicación.</p>
-                <br>
-    </article>
+            <h3 style="color: #305aa5;">Los juegos</h3>
+            <br>
+            <p>A continuación se presentan varios ejemplos de instrucciones
+                de los juegos
+                contenidos en la aplicación.</p>
+            <br>
+        </article>
 
         <div class="page">
             <div class="games">
@@ -93,14 +96,54 @@
                     <p>El juego consiste en seleccionar la imagen con el número
                         de objetos correctos dependiendo el número que sea
                         requerido.</p>
+
                 </div>
-                <!--<div class="button-container"> 
-                <a class="btn1 color-azul" onclick="toggleGame()">Leer Más<i class="fas fa-download"></i></a>
-            </div>-->
+                <div class="button-container">
+                    <a data-target="game-one" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
             <br>
             <div class="game-one" id="gameOne">
-                Game one
+                <br>
+
+                <p><b>Descripción</b></p>
+
+                <br>
+
+                <p>En esta actividad, los niños aprenderán a reconocer y asociar
+                    los números con la cantidad correspondiente de objetos.</p>
+
+                <ul>
+                    <li><b>Inicio del Juego:</b></li>
+                    <ul>
+                        <li>Al comenzar el juego, el niño será recibido con una
+                            pantalla principal que muestra una lista de números
+                            del 1 al 10.
+                        </li>
+                    </ul>
+                    <li><b>Selección del Npumero:</b></li>
+                    <ul>
+                        <li>El niño puede tocar cualquier número de la lista
+                            para seleccionarlo.
+                        </li>
+                    </ul>
+                    <li><b>-Visualización de Imágenes: </b></li>
+                    <ul>
+                        <li>Después de seleccionar un número, se mostrarán
+                            varias imágenes con diferentes cantidades de
+                            objetos.
+                        </li>
+                    </ul>
+                    <li><b>-Visualización de Imágenes: </b></li>
+                    <ul>
+                        <li>Después de seleccionar un número, se mostrarán
+                            varias imágenes con diferentes cantidades de
+                            objetos.
+                        </li>
+                    </ul>
+                </ul>
             </div>
         </div>
 
@@ -114,9 +157,11 @@
                     <h3>Juego 2: Letras</h3>
                     <p>El juego consiste en que el jugador</p>
                 </div>
-                <!--<div class="button-container"> 
-                <a class="btn1 color-azul" onclick="toggleGame()">Leer Más<i class="fas fa-download"></i></a>
-            </div>-->
+                <div class="button-container">
+                    <a data-target="game-two" class="btn1 color-azul"
+                        onclick="toggleGame(event)">Leer Más<i
+                            class="fas fa-download"></i></a>
+                </div>
             </div>
             <br>
             <div class="game-two" style="display: none;">
@@ -345,7 +390,9 @@
                 </div>
                 <div>
                     <h3>Juego 5: Cazadores de Verduras</h3>
-                    <p>En esta actividad, los niños aprenderán a reconocer y asociar diferentes figuras geométricas. En la pantalla principal...</p>
+                    <p>En esta actividad, los niños aprenderán a reconocer y
+                        asociar diferentes figuras geométricas. En la pantalla
+                        principal...</p>
                 </div>
                 <div class="button-container">
                     <a data-target="gamefive" class="btn1 color-azul"
@@ -529,7 +576,8 @@
                 </div>
                 <div>
                     <h3>Juego 7: Emociones</h3>
-                    <p>Descripción: El juego consiste en que el niño aprenda a identificar
+                    <p>Descripción: El juego consiste en que el niño aprenda a
+                        identificar
                         las emociones y sus sonidos correspondientes.</p>
                 </div>
                 <div class="button-container">

@@ -1,4 +1,4 @@
-/* Estilos básicos y restablecimiento de márgenes/paddings */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,23 +10,25 @@ hr {
     border-top: 1px solid #eee;
     margin-top: 1.5rem !important;
 }
-
-/* Estilos del header y el nav */
+ 
 .menu-header {
-    width: 100%;
-    z-index: 50;
-    background-color: #305aa5;
-    color: #fff;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    
+    
+    
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    /**position: relative;**/
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    background-color: #305aa5;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo del logo */

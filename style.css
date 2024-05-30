@@ -13,6 +13,7 @@ hr {
 
 /* Estilos del header y el nav */
 .menu-header {
+    z-index: 50;
     background-color: #305aa5;
     color: #fff;
     padding: 10px 20px;

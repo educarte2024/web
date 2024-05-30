@@ -629,8 +629,7 @@ article p {
     overflow: hidden;
     margin-left: 15px;
     box-shadow: 0px 6px 18px -5px rgba(0, 0, 0, 0.5);
-    background-size: 300% 100%;
-    moz-transition: all .4s ease-in-out;
+    background-size: 300% 100%; 
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -643,8 +642,7 @@ article p {
 }
 
 .btn1:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+    background-position: 100% 0; 
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -746,4 +744,12 @@ a {
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
 }
+}
+
+footer {
+    clear: both;
+    background: 305aa5;
+    box-sizing: border-box;
+    padding: 25px;
+    color: white;
 }

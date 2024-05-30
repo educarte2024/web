@@ -655,6 +655,7 @@ article p {
 
 /*Verde*/
 .btn1.color-verde {
+    width: 250px;
     color: #fff;
     background-image: linear-gradient(to right, #137f4c, #2bb673, #2bb673, #137f4c);
 }

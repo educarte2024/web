@@ -549,9 +549,8 @@ article p {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.image-container {
-    flex: 1;
-    max-width: 25%; /* Limita el ancho máximo del contenedor de la imagen */
+.image-container { 
+    max-width: 20%; /* Limita el ancho máximo del contenedor de la imagen */
     display: flex;
     justify-content: center; /* Centra la imagen horizontalmente */
 }

@@ -513,7 +513,7 @@ nav {
         flex-direction: column;
     }
     .image-container {
-        max-width: 100%; /* Ajusta el ancho máximo del contenedor de la imagen para pantallas pequeñas */
+        max-width: 50% !important; /* Ajusta el ancho máximo del contenedor de la imagen para pantallas pequeñas */
     }
 }
 
@@ -550,7 +550,7 @@ article p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .image-container { 
-    max-width: 20%; /* Limita el ancho máximo del contenedor de la imagen */
+    max-width: 17%; /* Limita el ancho máximo del contenedor de la imagen */
     display: flex;
     justify-content: center; /* Centra la imagen horizontalmente */
 }

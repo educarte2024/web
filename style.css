@@ -175,12 +175,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos específicos de la página */
-/**.header-box { 
-    height: 250px;
-    position: relative;
-    margin-bottom: 100px;
-}**/
 /** cambios recientes **/
 .header-box {
     position: relative;
@@ -240,34 +234,9 @@ nav {
     /* Mostrar completamente la imagen al pasar el cursor sobre el encabezado */
 }
 
-/**.title-header h1 {
-    text-shadow: -0.2px -1px 1px #00ffff, 0.2px 1px 1px #ff00ff;
-    z-index: 10;
-    padding: 25px;
-    font-family: 'More Sugar', 'Comic Sans MS';
-    text-align: left;
-    font-size: 63px;
-    line-height: 1.2;
-    font-weight: bold;
-}**/
-
 .fadeInFromRight {
     animation: fadeInFromRight 1s ease-out forwards;
 }
-
-/**.image-header {
-    overflow: hidden;
-    float: right;
-    width: 35%;
-    height: 250px;
-}**/
-
-/**.image-header img {
-    margin-right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}**/
 
 .main-wrapper {
     width: 100%;
@@ -385,7 +354,7 @@ nav {
 }
 
 .games img {
-    width: 70px;
+    width: 25%;
     transition: transform 0.5s ease; 
     transform-origin: center;
     display: block; 
@@ -490,20 +459,7 @@ nav {
 }
 
 @media only screen and (max-width: 850px) {
-    /**
-    .header-box { 
-        height: 200px !important;
-        position: relative;
-    }**/
-    /**
-    .image-header { 
-        height: 200px !important;
-    }**/
 
-    /**.title-header { 
-        height: 200px !important; 
-    }
-**/
     .title-header h1 {
         font-weight: normal;
         padding: 10px;
